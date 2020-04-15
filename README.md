@@ -59,7 +59,7 @@ hbase shell
 # submit the bulkload word counter spark job in cluster mode, using Yarn 
 # (check the arguments for each job in the main function)
 # you have to use a user that has access to Yarn in HDFS
-sudo -u hdfs spark-submit --class symat.javaspark.WordCountBulkLoadToHBase --master yarn --deploy-mode cluster /root/spark-hbase.jar  hdfs:///tmp/test.txt testtable
+sudo -u hdfs spark-submit --class symat.javaspark.WordCountBulkLoadToHBase --master yarn --deploy-mode cluster /tmp/spark-hbase.jar  hdfs:///tmp/test.txt testtable
 
 
 # verify the output in HBase

@@ -34,8 +34,6 @@ public class WordCountFromHBase {
         JavaRDD<String> words = inputLines
              .flatMap(s -> Arrays.asList(s.split(" ")).iterator());
 
-        System.out.println("******* " + inputLines.collect());
-
         JavaPairRDD<String, Integer> pairs = words
             .mapToPair(s -> new Tuple2<>(s, 1));
 
